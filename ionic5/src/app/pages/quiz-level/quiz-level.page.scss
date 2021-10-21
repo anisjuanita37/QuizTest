@@ -1,0 +1,154 @@
+.myPageHeader {
+  --min-height: 44px;
+  --border-color: var(--ion-color-light);
+  --background: var(--ion-color-light);
+  h6 {
+    color: var(--ion-color-dark);
+    text-align: center;
+    margin: 0;
+    font-variant: small-caps;
+  }
+}
+
+.backButton {
+  color: var(--ion-color-dark-contrast);
+}
+
+.quiz-level {
+  --overflow-y: auto;
+  --background: var(--ion-color-light);
+}
+
+.myLevels {
+  align-items: flex-start;
+  top: 5.5%;
+  ion-card {
+    background: var(--ion-color-dark-contrast);
+  }
+  ion-card-header {
+    background: var(--ion-color-primary-tint);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: var(--ion-color-dark);
+  }
+  ion-card-header + .card-content-md {
+    padding-top: 10px;
+  }
+  @media (max-height: 580px) {
+    top: 0;
+  }
+  @media (min-height: 1000px) {
+    align-items: center;
+    top: 0;
+    ion-card {
+      padding: 16px;
+    }
+  }
+}
+
+.grid-gallery {
+  flex-wrap: wrap;
+  justify-content: center;
+  .col-gallery {
+    padding: 10px 5px;
+    @media (orientation: portrait) {
+      max-width: 33%;
+      flex: 0 0 33%;
+    }
+    .all-fabs {
+      --background: radial-gradient(circle, #ececec, #bdbdbd);
+      --background-activated: transparent;
+      width: 4.5rem;
+      height: 4.5rem;
+      margin: auto;
+      --color: black;
+      overflow: visible;
+      @media (max-width: 350px) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+    .mark-badge {
+      position: absolute;
+      top: 3px;
+      right: 0.8rem;
+      padding: 0.5em;
+      border-radius: 50%;
+      border: 2px solid var(--ion-color-dark-contrast);
+      @media (max-width: 350px) {
+        right: 0;
+      }
+      @media (min-width: 760px) and (max-width: 1000px) {
+        right: 4.2rem;
+      }
+      @media (min-width: 1000px) {
+        right: 7rem;
+      }
+    }
+  }
+  .good {
+    .all-fabs {
+      --background: radial-gradient(circle, white, #5bff5b);
+    }
+    ion-badge {
+      background: green;
+    }
+  }
+  .average {
+    .all-fabs {
+      --background: radial-gradient(circle, white, #ffb74e);
+    }
+    ion-badge {
+      background: orange;
+    }
+  }
+  .poor {
+    .all-fabs {
+      --background: radial-gradient(circle, white, #ff8787);
+    }
+    ion-badge {
+      background: firebrick;
+    }
+  }
+}
+
+ion-slides {
+  padding-bottom: 32px;
+}
+
+::ng-deep {
+  .swiper-pagination-bullet {
+    background: var(--ion-color-primary);
+  }
+  .detailsTable {
+    width: 100%;
+    margin: 1px;
+    td {
+      padding: 0 10px;
+    }
+    .detailsrecord {
+      line-height: 2.5;
+      .leftCol {
+        text-align: left;
+      }
+      .rightCol {
+        text-align: left;
+        color: var(--ion-color-primary);
+      }
+    }
+  }
+  .md .detailsTable {
+    border: 1px solid var(--ion-color-light);
+  }
+  .quizlevelLoader .loading-content {
+    font-size: 2em;
+    position: absolute;
+    right: 10%;
+    left: -10%;
+    text-align: center;
+  }
+}
+
+.alert-md .alert-message {
+  padding-bottom: 5px;
+}

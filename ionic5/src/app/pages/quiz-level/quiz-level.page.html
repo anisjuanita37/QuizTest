@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>QuizTime</ion-title>
+    <ion-buttons slot="start" (click)="goBack()">
+      <ion-icon name="arrow-back" class="ion-padding-end backButton"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="quiz-level">
+  <ion-toolbar class="myPageHeader">
+    <h6> Choose Level </h6>
+  </ion-toolbar>
+
+  <ion-slides pager="true">
+    <ion-slide class="myLevels" *ngFor="let level of levels">
+      <ion-card>
+        <ion-card-header>
+          <h1 class="level-name"> {{level.name}} </h1>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="grid-gallery">
+            <ion-col class="col-gallery" *ngFor="let l of level.details" [ngClass]="{'good':(l.percentage >=80),
+            'average': (l.percentage >=50 && l.percentage <80), 'poor': (l.percentage >=0  && l.percentage <50)}">
+              <ion-fab-button class="all-fabs" (click)="startTest(l.id)">
+                {{l.id}}
+              </ion-fab-button>
+              <ion-badge *ngIf="l.percentage >= 0" class="mark-badge">{{l.percentage}}</ion-badge>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

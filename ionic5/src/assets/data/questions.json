@@ -1,0 +1,60 @@
+
+{
+  "questions": [
+    {
+      "no": "1",
+      "question": "Which is the coldest location on the Earth",
+      "answers":[
+        {"optionId": "A", "option": "Greenland"},
+        {"optionId": "B", "option": "East Antartica"},
+        {"optionId": "C", "option": "West Antartica"},
+        {"optionId": "D", "option": "Russia"}
+      ],
+      "correctOption": "B"
+    },
+    {
+      "no": "2",
+      "question": "Which is the oldest democracy / parliamentary in the world",
+      "answers":[
+        {"optionId": "A", "option": "Russia"},
+        {"optionId": "B", "option": "Germany"},
+        {"optionId": "C", "option": "USA"},
+        {"optionId": "D", "option": "Britain"}
+      ],
+      "correctOption": "D"
+    },
+    {
+      "no": "3",
+      "question": "Which country is known as land of lilies",
+      "answers":[
+        {"optionId": "A", "option": "Canada"},
+        {"optionId": "B", "option": "India"},
+        {"optionId": "C", "option": "Britain"},
+        {"optionId": "D", "option": "Russia"}
+      ],
+      "correctOption": "A"
+    },
+    {
+      "no": "4",
+      "question": "Which is the brightest planet in solar system",
+      "answers":[
+        {"optionId": "A", "option": "Mercury"},
+        {"optionId": "B", "option": "Venus"},
+        {"optionId": "C", "option": "Jupiter"},
+        {"optionId": "D", "option": "Saturn"}
+      ],
+      "correctOption": "B"
+    },
+    {
+      "no": "5",
+      "question": "World first University is located in which country",
+      "answers":[
+        {"optionId": "A", "option": "USA"},
+        {"optionId": "B", "option": "Germany"},
+        {"optionId": "C", "option": "India"},
+        {"optionId": "D", "option": "Britain"}
+      ],
+      "correctOption": "C"
+    }
+  ]
+}

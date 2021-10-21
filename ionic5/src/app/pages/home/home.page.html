@@ -1,0 +1,24 @@
+<ion-header class="frontPageHeader">
+  <ion-toolbar mode="md">
+    <ion-title class="frontPageTitle">
+      QuizTime
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <img data-src={{home}} class="myFrontImage">
+</ion-content>
+
+<ion-footer translucent="true">
+  <ion-toolbar mode="md">
+    <ion-row class="ion-no-padding">
+      <ion-col size="6" class="ion-no-padding">
+        <ion-button expand="block" (click)="callChart()"> Score </ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-no-padding">
+        <ion-button expand="block" (click)="startQuiz()"> Start Quiz </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,61 @@
+{
+  "levels": [
+    {
+      "total_completed": 4,
+      "difficulty": [
+        {
+          "name": "Easy",
+          "details": [
+            {"id":1,"percentage":"99"},
+            {"id":2,"percentage":"60"},
+            {"id":3,"percentage":"20"},
+            {"id":4,"percentage":"40"},
+            {"id":5,"percentage":"NaN"},
+            {"id":6,"percentage":"NaN"},
+            {"id":7,"percentage":"NaN"},
+            {"id":8,"percentage":"NaN"},
+            {"id":9,"percentage":"NaN"},
+            {"id":10,"percentage":"NaN"},
+            {"id":11,"percentage":"NaN"},
+            {"id":12,"percentage":"NaN"}
+          ]
+        },
+        {
+          "name" : "Medium",
+          "details": [
+            {"id":13,"percentage":"99"},
+            {"id":14,"percentage":"60"},
+            {"id":15,"percentage":"80"},
+            {"id":16,"percentage":"60"},
+            {"id":17,"percentage":"NaN"},
+            {"id":18,"percentage":"NaN"},
+            {"id":19,"percentage":"NaN"},
+            {"id":20,"percentage":"NaN"},
+            {"id":21,"percentage":"NaN"},
+            {"id":22,"percentage":"NaN"},
+            {"id":23,"percentage":"NaN"},
+            {"id":24,"percentage":"NaN"}
+          ]
+        },
+        {
+          "name" : "Hard",
+          "details": [
+            {"id":25,"percentage":"90"},
+            {"id":26,"percentage":"60"},
+            {"id":27,"percentage":"40"},
+            {"id":28,"percentage":"100"},
+            {"id":29,"percentage":"NaN"},
+            {"id":30,"percentage":"NaN"},
+            {"id":31,"percentage":"NaN"},
+            {"id":32,"percentage":"NaN"},
+            {"id":33,"percentage":"NaN"},
+            {"id":34,"percentage":"NaN"},
+            {"id":35,"percentage":"NaN"},
+            {"id":36,"percentage":"NaN"}
+          ]
+        }
+      ]
+    }
+  ]
+}
+

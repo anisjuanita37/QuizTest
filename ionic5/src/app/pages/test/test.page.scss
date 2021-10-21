@@ -1,0 +1,142 @@
+:host {
+  .header-md::after {
+    width: 0;
+  }
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+  --overflow-y: hidden;
+}
+
+.quizHeader {
+  --background: var(--ion-color-light);
+  --border-style: none;
+  --border-color: none;
+  ion-row {
+    padding: 0 1rem;
+  }
+  ion-col {
+    font-size: 1.75rem;
+  }
+
+  .showIncrementScoreValue {
+    display: inline-flex;
+    animation: scoreUpdate 1.5s;
+    color: green;
+    font-size: 0.8rem;
+    margin-left: 10px;
+  }
+
+  .hideIncrementScoreValue {
+    display: inline-flex;
+    opacity: 0;
+  }
+
+  @keyframes scoreUpdate {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.progress {
+  background: #efefef;
+  margin: 0 5px 10px;
+  border: 0.2em solid limegreen;
+  border-radius: 10px;
+  .progress-bar {
+    background: limegreen;
+    transition: all 0.3s linear;
+    height: 3px;
+  }
+}
+
+.questions-slide {
+  height: 97%;
+  position: relative;
+  overflow-y: hidden;
+
+  .que {
+    padding: 0.5rem 0.75rem;
+    background: var(--ion-color-primary);
+    border-radius: 20px;
+    font-weight: bold;
+    h6 {
+      margin: 0.8rem 0;
+      line-height: 1.5rem;
+    }
+  }
+
+  .answers {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    left: 0;
+    background: none;
+    .item {
+      --background: var(--ion-color-light);
+      .radio-checked {
+        visibility: hidden;
+      }
+      --background-activated: var(--ion-color-primary-tint);
+      --background-activated-opacity: 1;
+    }
+    .item:first-child {
+      border-top: thin solid #dedede;
+    }
+    .item:last-child {
+      border-bottom: thin solid #dedede;
+    }
+    .item.item-radio-checked {
+      --background: var(--ion-color-primary-tint);
+    }
+    .item-radio-checked .sc-ion-label-ios-h,
+    .item-radio-checked .sc-ion-label-md-h {
+      opacity: 1 !important;
+      color: black;
+    }
+  }
+
+  .indicator {
+    display: inline-flex;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    ion-icon {
+      padding: 0 0.15rem;
+      font-size: 1.3rem;
+      color: grey;
+    }
+    .current {
+      color: orange;
+    }
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+    }
+  }
+}
+
+.swiper-slide {
+  display: block;
+}

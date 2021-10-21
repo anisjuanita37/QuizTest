@@ -1,0 +1,232 @@
+ion-content {
+  --background: var(--ion-color-primary);
+  --overflow-y: hidden;
+}
+
+.result-circle-card {
+  background: var(--ion-color-dark-contrast);
+  position: absolute;
+  top: 55.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0;
+  padding: 65px 20px 20px 20px;
+  z-index: 99;
+  background: rgba(white, 0.5);
+  ion-card-content {
+    position: relative;
+    background: var(--ion-color-dark-contrast);
+    .show-border {
+      border-left: 1px solid #e8e8e8;
+    }
+    .green {
+      color: green;
+    }
+    .red {
+      color: red;
+    }
+    ion-col {
+      font-size: 1rem;
+      padding: 10px;
+      font-variant: small-caps;
+    }
+  }
+}
+
+.circle {
+  z-index: 100;
+  position: absolute;
+  left: 51%;
+  top: 29.5%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  .text-color {
+    color: var(--ion-color-dark-contrast);
+  }
+}
+
+//Modify the properties below to change the color of the percentage circle
+$circle-width: 0.08em;
+$circle-progress-color: var(--ion-color-dark-contrast);
+$circle-color: transparent;
+$circle-bg-color: var(--ion-color-primary-tint);
+
+.rect-auto {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.pie {
+  position: absolute;
+  border: $circle-width solid $circle-progress-color;
+  width: 1 - (2 * $circle-width);
+  height: 1 - (2 * $circle-width);
+  clip: rect(0em, 0.5em, 1em, 0em);
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+.pie-fill {
+  transform: rotate(180deg);
+}
+
+.c100 {
+  *,
+  *:before,
+  *:after {
+    box-sizing: content-box;
+  }
+  position: relative;
+  //font-size: 8em;
+  font-size: 10em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  float: left;
+  margin: 0 0.1em 0.1em 0;
+  //background: $circle-color;
+  background: var(--ion-color-primary);
+  &.center {
+    float: none;
+    margin: 0 auto;
+  }
+
+  > span {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 5em;
+    line-height: 5em;
+    font-size: 0.2em;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  &:after {
+    position: absolute;
+    top: $circle-width;
+    left: $circle-width;
+    display: block;
+    content: " ";
+    border-radius: 50%;
+    background: $circle-bg-color;
+    width: 1 - (2 * $circle-width);
+    height: 1 - (2 * $circle-width);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+  }
+  .slice {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0em, 1em, 1em, 0.5em);
+  }
+  .bar {
+    @extend .pie;
+  }
+  @for $j from 51 through 100 {
+    &.p#{$j} .slice {
+      @extend .rect-auto;
+    }
+    &.p#{$j} .bar:after {
+      @extend .pie-fill;
+    }
+    &.p#{$j} .fill {
+      @extend .pie;
+      @extend .pie-fill;
+    }
+  }
+  @for $j from 1 through 100 {
+    &.p#{$j} .bar {
+      transform: rotate((360/100 * $j) + deg);
+    }
+  }
+}
+
+.result-footer {
+  ion-toolbar {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    .toolbar-background {
+      border-style: none;
+    }
+    ion-col {
+      padding-top: 0;
+      padding-bottom: 0;
+      button {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+result {
+  .footer-md::before {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .circle {
+    left: 54%;
+    top: 20.5%;
+  }
+  .result-circle-card {
+    top: 57.5%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) {
+  .circle {
+    left: 54%;
+    top: 25.5%;
+  }
+  .result-circle-card {
+    top: 57.5%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 650px) {
+  .circle {
+    left: 54%;
+    top: 34.5%;
+  }
+  .result-circle-card {
+    top: 57.5%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .circle {
+    top: 36%;
+  }
+  .result-circle-card {
+    top: 52.5%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .c100 {
+    font-size: 15em;
+  }
+  .circle {
+    top: 30.5%;
+  }
+  .result-circle-card {
+    top: 46.5%;
+    padding-top: 100px;
+    ion-card-content {
+      ion-col {
+        font-size: 2rem;
+      }
+    }
+  }
+}
